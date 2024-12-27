@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovladače, firmware a utility</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; /* Změna pozadí na světle šedou */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 250%;
+            margin: 0;
+            color: white;
+        }
+
+        header p {
+            margin: 10px 0 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        h2 {
+            color: black;
+            padding: 5px 20px;
+            display: inline-block;
+            line-height: 1;
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 20px;
+            font-size: 2em; /* Zvýšení velikosti nadpisu */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: calc(33% - 20px); /* Tři boxy vedle sebe */
+            box-sizing: border-box;
+        }
+
+        .box h3 {
+            margin-top: 0;
+        }
+
+        .box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .box ul li {
+            margin: 5px 0;
+        }
+
+        .box ul li a {
+            color: #005bb5; /* Změna barvy odkazů na tmavě modrou */
+            text-decoration: none;
+        }
+
+        .box ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer hr {
+            border: 0;
+            border-top: 1px solid white;
+            margin: 10px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            width: 200px; /* Zvýšení velikosti loga */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="ovladace-firmware-a-utility">Ovladače, firmware a utility</h1>
+        <p><a href="../index.html">Úvodní stránka</a></p>
+    </header>
+    <main>
+        <p>K systémovému software můžeme kromě operačních systémů zařadit
+        ovladače hardarových zařízení, firmware a aspoň z části i tzv. utility.</p>
+        
+        <h2 id="ovladace">Ovladače</h2>
+        <p>Ovladače zařízení (<a href="https://cs.wikipedia.org/wiki/Ovlada%C4%8D_za%C5%99%C3%ADzen%C3%AD" target="_blank">device drivers</a>). Speciální programy, které zajišťují komunikaci OS s určitým technickým vybavením. Bez potřebného ovladače nemůže
+            zařízení správně fungovat. Standardní ovladače pro běžná zařízení, jakými
+            jsou flash disk, myš, klávesnice nebo digitální fotoaparáty, bývají součástí
+            moderních OS. Instalaci zařízení ve Windows usnadňuje standard Plug and
+            Play (PnP - „připoj a hrej“), který zajistí automatickou detekci nově připojeného hardware a případně i automatické vyhledání potřebného ovladače. Není-li
+            driver nalezen přímo v OS, musí být použit externí instalátor ovladače z disku dodaného se zařízením (např. z instalačního CD k tiskárně), nebo stažený
+            z internetových stránek, nejlépe přímo od výrobce. Nevhodně zvolený ovladač
+            může v krajním případě způsobit nefunkčnost zařízení, někdy i celého OS.</p>
+        
+        <h2 id="firmware">Firmware</h2>
+        <p>Firmware. Programové vybavení, které slouží pro řízení nějakého vestavěného systému (<a href="https://cs.wikipedia.org/wiki/Embedded_system" target="_blank">embedded system</a>). Firmware řídí například kalkulačky, počítačové komponenty (pevný disk, router…), mobilní telefon, digitální fotoaparát atd.
+            Dříve byla aktualizace firmwaru realizována nahrazením paměťového média
+            obsahujícího firmware (např. výměna ROM paměti), dnes může být novější verze firmware přepsána díky používaným flash pamětem. Základním firmwarem
+            v počítači je <a href="https://cs.wikipedia.org/wiki/BIOS" target="_blank">BIOS (Basic Output-Input System)</a>, který zajišťuje především start
+            počítače a umožňuje konfiguraci základní desky i připojeného hardware.</p>
+        
+        <h2 id="utility">Utility</h2>
+        <p>Utility. Jsou menší pomocné programy, které umožňují vykonávat servisní
+            operace potřebné k fungování počítače. Patří k nim komprimační programy,
+            diagnostické a testovací programy, utility pro kontrolu a optimalizaci operačního systému, různé konverzní (převodní) programy, které umí přehledně zobrazit obrázky, převést je z jednoho formátu na jiný atd. Řada utilit je integrální
+            součástí OS. Příkladem může být <a href="https://cs.wikipedia.org/wiki/Spr%C3%A1vce_%C3%BAloh" target="_blank">Správce úloh ve Windows (Task Manager)</a>,
+            který umožňuje nejen správu spuštěných programů a služeb, ale i sledování
+            využití systémových zdrojů (procesoru, paměti). Dalšími užitečnými utilitami
+            jsou nástroje pro <a href="https://cs.wikipedia.org/wiki/Defragmentace" target="_blank">defragmentaci (defrag)</a> nebo <a href="https://cs.wikipedia.org/wiki/CHKDSK" target="_blank">kontrolu disku (chkdsk)</a>. Některé
+            utility lze spouštět z příkazového řádku (ping, ipconfig apod.).</p>
+    </main>
+    <footer>
+        <hr>
+        <p>Copyright 2024 - Ondřej Tesařík, IT1</p>
+        <p><a href="https://www.sspu-opava.cz" target="_blank"><img src="../img/skola-logo.png" alt="Školní logo"></a></p>
+    </footer>
+</body>
+</html>

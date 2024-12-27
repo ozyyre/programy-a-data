@@ -4,73 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programy a data | Úvodní stránka</title>
-    <link rel="stylesheet" href="./css/uvodni.css   ">
+    <link rel="stylesheet" href="./css/uvodni.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; /* Změna pozadí na světle šedou */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 400%;
+            margin: 0;
+            color: white;
+        }
+
+        header p {
+            margin: 10px 0 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            color: black;
+            padding: 5px 20px;
+            display: inline-block;
+            line-height: 1;
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 20px;
+            font-size: 2em; /* Zvýšení velikosti nadpisu */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: calc(33% - 20px); /* Tři boxy vedle sebe */
+            box-sizing: border-box;
+        }
+
+        .box h3 {
+            margin-top: 0;
+        }
+
+        .box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .box ul li {
+            margin: 5px 0;
+        }
+
+        .box ul li a {
+            color: #005bb5; /* Změna barvy odkazů na tmavě modrou */
+            text-decoration: none;
+        }
+
+        .box ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer hr {
+            border: 0;
+            border-top: 1px solid white;
+            margin: 10px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer img {
+            width: 200px; /* Zvýšení velikosti loga */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 <header>
-<h1>Programy a data</h1>
-<p> Úvodní stránka</p>
+    <h1>Programy a data</h1>
+    <p>Úvodní stránka</p>
 </header>
 <main>
     <h2>Obsah stránek</h2>
-
-<div>
-<div>
-    <h3><a href="./a/index.html">Programové a datové soubory</a></h3>
-    <ul>
-        <li><a href="a/index.html#soubory-a-adresare">Soubory a adresáře</a></li>
-        <li><a href="a/index.html#programove-soubory">Programové soubory</a></li>
-        <li><a href="a/index.html#datove-soubory">Datové soubory</a></li>
-    </ul>
-</div>
-<div>
-    <h3><a href="">Laboriosam mollitia perspiciatis distinctio.</a></h3>
-    <ul>
-        <li><a href="">odkaz 1</a></li>
-        <li><a href="">odkaz 2</a></li>
-        <li><a href="">odkaz 3</a></li>
-    </ul>
-</div>
-<div>
-    <h3><a href="">Impedit aliquam commodi vel.</a></h3>
-    <ul>
-        <li><a href="">odkaz 1</a></li>
-        <li><a href="">odkaz 2</a></li>
-        <li><a href="">odkaz 3</a></li>
-    </ul>
-</div>
-<div>
-    <h3><a href="">Quaerat quibusdam distinctio voluptatum!</a></h3>
-    <ul>
-        <li><a href="">odkaz 1</a></li>
-        <li><a href="">odkaz 2</a></li>
-        <li><a href="">odkaz 3</a></li>
-    </ul>
-</div>
-<div>
-    <h3><a href="">Similique accusamus voluptatum id.</a></h3>
-    <ul>
-        <li><a href="">odkaz 1</a></li>
-        <li><a href="">odkaz 2</a></li>
-        <li><a href="">odkaz 3</a></li>
-    </ul>
-</div>
-<div>
-    <h3><a href="">Harum quo totam magni!</a></h3>
-    <ul>
-        <li><a href="">odkaz 1</a></li>
-        <li><a href="">odkaz 2</a></li>
-        <li><a href="">odkaz 3</a></li>
-    </ul>
-</div>
-</div>
+    <div class="container">
+        <div class="box">
+            <h3><a href="./a/index.html">Programové a datové soubory</a></h3>
+            <ul>
+                <li><a href="a/index.html#soubory-a-adresare">Soubory a adresáře</a></li>
+                <li><a href="a/index.html#programove-soubory">Programové soubory</a></li>
+                <li><a href="a/index.html#datove-soubory">Datové soubory</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3><a href="./b/index.html">Operační systémy</a></h3>
+            <ul>
+                <li><a href="b/index.html#rozdeleni-pocitacovych-systemu">Rozdělení počítačových systémů</a></li>
+                <li><a href="b/index.html#operacni-systemy-a-jejich-zakladni-funkce">Operační systémy a jejich základní funkce</a></li>
+                <li><a href="b/index.html#historie-operacnich-systemu">Historie operačních systémů</a></li>
+                <li><a href="b/index.html#typy-operacnich-systemu">Typy operačních systémů</a></li>
+            </ul>
+            </ul>
+        </div>
+        <div class="box">
+            <h3><a href="./c/index.html">Ovladače, firmware a utility</a></h3>
+            <ul>
+                <li><a href="c/index.html#ovladace">Ovladače</a></li>
+                <li><a href="c/index.html#firmware">Firmware</a></li>
+                <li><a href="c/index.html#utility">Utility</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3><a href="">Quaerat quibusdam distinctio voluptatum!</a></h3>
+            <ul>
+                <li><a href="">odkaz 1</a></li>
+                <li><a href="">odkaz 2</a></li>
+                <li><a href="">odkaz 3</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3><a href="">Similique accusamus voluptatum id.</a></h3>
+            <ul>
+                <li><a href="">odkaz 1</a></li>
+                <li><a href="">odkaz 2</a></li>
+                <li><a href="">odkaz 3</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3><a href="">Harum quo totam magni!</a></h3>
+            <ul>
+                <li><a href="">odkaz 1</a></li>
+                <li><a href="">odkaz 2</a></li>
+                <li><a href="">odkaz 3</a></li>
+            </ul>
+        </div>
+    </div>
 </main>
-    <footer>
-        <hr>
-        <p>Copyright 2024 - Ondřej Tesařík, IT1</p>
-        <p><a href="https://www.sspu-opava.cz" target="_blank"><img src="./img/skola-logo.png" alt="Školní logo"></a></p>
-        <p><a href="https://www.sspu-opava.cz" target="_blank">Web školy</a></p>
-    </footer>
+<footer>
+    <hr>
+    <p>Copyright 2024 - Ondřej Tesařík, IT1</p>
+    <p><a href="https://www.sspu-opava.cz" target="_blank"><img src="./img/skola-logo.png" alt="Školní logo"></a></p>
+    <p><a href="https://www.sspu-opava.cz" target="_blank">Web školy</a></p>
+</footer>
 </body>
-
 </html>
