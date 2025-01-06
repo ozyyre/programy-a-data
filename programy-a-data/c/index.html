@@ -22,6 +22,7 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -32,6 +33,11 @@
 
         header p {
             margin: 10px 0 0;
+            text-align: left; /* Zarovnání odkazu vlevo */
+            padding-left: 20px; /* Přidání odsazení vlevo */
+            position: absolute;
+            left: 20px;
+            top: 20px;
         }
 
         header a {
@@ -55,54 +61,20 @@
             line-height: 1;
             text-align: center;
             vertical-align: middle;
-            margin-top: 20px;
-            font-size: 2em; /* Zvýšení velikosti nadpisu */
+            margin-top: 10px; /* Zmenšení horního odsazení */
+            font-size: 1.75em; /* Zmenšení velikosti nadpisu */
         }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .box {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 20px;
-            width: calc(33% - 20px); /* Tři boxy vedle sebe */
-            box-sizing: border-box;
-        }
-
-        .box h3 {
-            margin-top: 0;
-        }
-
-        .box ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .box ul li {
-            margin: 5px 0;
-        }
-
-        .box ul li a {
-            color: #005bb5; /* Změna barvy odkazů na tmavě modrou */
-            text-decoration: none;
-        }
-
-        .box ul li a:hover {
-            text-decoration: underline;
+        p {
+            margin-top: 10px; /* Zmenšení horního odsazení */
+            margin-bottom: 10px; /* Zmenšení spodního odsazení */
         }
 
         footer {
             background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0; /* Zkrácení spodního okraje */
         }
 
         footer hr {
