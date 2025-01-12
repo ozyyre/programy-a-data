@@ -4,110 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ovladače, firmware a utility</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <meta name="description" content="Stránka o ovladačích, firmwaru a utilitách.">
+    <meta name="keywords" content="ovladače, firmware, utility, software, hardware">
+    <link rel="stylesheet" href="../css/uvodni.css">
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #e0e0e0; /* Změna pozadí na světle šedou */
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
-
-        header {
-            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 250%;
-            margin: 0;
-            color: white;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            text-align: left; /* Zarovnání odkazu vlevo */
-            padding-left: 20px; /* Přidání odsazení vlevo */
-            position: absolute;
-            left: 20px;
-            top: 20px;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-        }
-
-        header a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 20px;
-            flex: 1;
-        }
-
-        h2 {
-            color: black;
-            padding: 5px 20px;
-            display: inline-block;
-            line-height: 1;
-            text-align: center;
-            vertical-align: middle;
-            margin-top: 10px; /* Zmenšení horního odsazení */
-            font-size: 1.75em; /* Zmenšení velikosti nadpisu */
-        }
-
-        p {
-            margin-top: 10px; /* Zmenšení horního odsazení */
-            margin-bottom: 10px; /* Zmenšení spodního odsazení */
-        }
-
-        footer {
-            background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
-            color: white;
-            text-align: center;
-            padding: 10px 0; /* Zkrácení spodního okraje */
-        }
-
-        footer hr {
-            border: 0;
-            border-top: 1px solid white;
-            margin: 10px 0;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer img {
-            width: 200px; /* Zvýšení velikosti loga */
+        .main-image {
+            width: 50%; /* Zmenšení obrázku na 50% šířky */
             height: auto;
+            display: block;
+            margin: 20px auto; /* Vycentrování obrázku */
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 id="ovladace-firmware-a-utility">Ovladače, firmware a utility</h1>
-        <p><a href="../index.html">Úvodní stránka</a></p>
-    </header>
-    <main>
+<header>
+    <h1>Ovladače, firmware a utility</h1>
+    <p><a href="../index.html">Úvodní stránka</a></p>
+</header>
+<nav>
+    <a href="../a/index.html">Programové a datové soubory</a>
+    <a href="../b/index.html">Operační systémy</a>
+    <a href="../c/index.html">Ovladače, firmware a utility</a>
+    <a href="../d/index.html">Aplikační software</a>
+    <a href="../e/index.html">Instalace programů</a>
+    <a href="../f/index.html">Softwarová license</a>
+</nav>
+<main>
+    <div class="content">
         <p>K systémovému software můžeme kromě operačních systémů zařadit
         ovladače hardarových zařízení, firmware a aspoň z části i tzv. utility.</p>
         
@@ -115,7 +42,7 @@
         <p>Ovladače zařízení (<a href="https://cs.wikipedia.org/wiki/Ovlada%C4%8D_za%C5%99%C3%ADzen%C3%AD" target="_blank">device drivers</a>). Speciální programy, které zajišťují komunikaci OS s určitým technickým vybavením. Bez potřebného ovladače nemůže
             zařízení správně fungovat. Standardní ovladače pro běžná zařízení, jakými
             jsou flash disk, myš, klávesnice nebo digitální fotoaparáty, bývají součástí
-            moderních OS. Instalaci zařízení ve Windows usnadňuje standard Plug and
+            moderních OS. Instalaci zařízenía ve Windows usnadňuje standard Plug and
             Play (PnP - „připoj a hrej“), který zajistí automatickou detekci nově připojeného hardware a případně i automatické vyhledání potřebného ovladače. Není-li
             driver nalezen přímo v OS, musí být použit externí instalátor ovladače z disku dodaného se zařízením (např. z instalačního CD k tiskárně), nebo stažený
             z internetových stránek, nejlépe přímo od výrobce. Nevhodně zvolený ovladač
@@ -137,11 +64,16 @@
             využití systémových zdrojů (procesoru, paměti). Dalšími užitečnými utilitami
             jsou nástroje pro <a href="https://cs.wikipedia.org/wiki/Defragmentace" target="_blank">defragmentaci (defrag)</a> nebo <a href="https://cs.wikipedia.org/wiki/CHKDSK" target="_blank">kontrolu disku (chkdsk)</a>. Některé
             utility lze spouštět z příkazového řádku (ping, ipconfig apod.).</p>
-    </main>
-    <footer>
-        <hr>
+    </div>
+    <img src="../img/ovladace-firmware-utility.svg" alt="Ovladače, firmware a utility" class="main-image">
+</main>
+<footer>
+    <hr>
+    <div class="footer-content">
         <p>Copyright 2024 - Ondřej Tesařík, IT1</p>
         <p><a href="https://www.sspu-opava.cz" target="_blank"><img src="../img/skola-logo.png" alt="Školní logo"></a></p>
-    </footer>
+        <p><a href="https://www.sspu-opava.cz" target="_blank">Web školy</a></p>
+    </div>
+</footer>
 </body>
 </html>
