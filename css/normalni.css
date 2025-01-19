@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #e0e0e0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #005bb5;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #005bb5, #003366); /* Přidání gradientu */
+}
+
+header h1 {
+    font-size: 250%;
+    margin: 0;
+    color: white;
+}
+
+header p {
+    margin: 10px 0 0;
+    text-align: left;
+    padding-left: 20px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #004494;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: sticky; /* Přidání sticky pozice */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s, background-color 0.3s; /* Přidání přechodu pro hover efekt */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Změna barvy při hover efektu */
+    text-decoration: underline;
+    background-color: #003366; /* Přidání pozadí při hover efektu */
+}
+
+nav a.active {
+    font-weight: bold; /* Zvýraznění aktuální stránky */
+    background-color: #002244; /* Přidání pozadí pro aktivní odkaz */
+    border-radius: 5px; /* Přidání zaoblených rohů pro aktivní odkaz */
+    color: #ffcc00; /* Zářivá barva pro aktivní odkaz */
+    box-shadow: none; /* Zrušení černého rámečku */
+}
+
+h2, h3 {
+    text-align: center;
+    color: #005bb5;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px; /* Nastavení maximální šířky pro lepší čitelnost */
+    margin: 0 auto; /* Centrovat kontejner */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 100%; /* Zabrání horizontálnímu posouvání */
+}
+
+.box {
+    background-color: #f5f5f5; /* Méně ostrá barva pozadí */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 100%; /* Roztáhnutí boxu na celou šířku */
+    max-width: 350px; /* Maximální šířka boxu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Přidání přechodových efektů */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Efekt posunutí nahoru při hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Zvýšení stínu při hover */
+}
+
+.box h3 {
+    margin-top: 0;
+}
+
+.box ul {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #005bb5; /* Změna barvy pozadí na tmavě modrou */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Zkrácení spodního okraje */
+    max-width: 100%; /* Zabrání horizontálnímu posouvání */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zarovnání obsahu na střed */
+    margin-top: auto;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid white;
+    margin: 10px 0;
+    width: 100%; /* Šířka hr */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Zabrání horizontálnímu posouvání */
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center; /* Zarovnání textu na střed */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    text-align: center; /* Zarovnání odkazu na střed */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    width: 200px; /* Zvýšení velikosti loga */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Zarovnání obrázku na střed */
+}
+
+/* Efekty pro tlačítka */
+button {
+    background-color: #005bb5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Přidání přechodových efektů */
+    border-radius: 5px; /* Přidání zaoblených rohů */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Přidání stínu */
+}
+
+button:hover {
+    background-color: #003366; /* Změna barvy pozadí při hover efektu */
+    transform: scale(1.05); /* Zvýšení velikosti při hover efektu */
+}
+
+button:active {
+    background-color: #002244; /* Změna barvy pozadí při aktivním stavu */
+    transform: scale(0.95); /* Zmenšení velikosti při aktivním stavu */
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2); /* Změna stínu při aktivním stavu */
+}
+
+/* Pravidla pro malé obrazovky */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Boxy se zarovnají pod sebe na úzkých obrazovkách */
+    }
+
+    .box {
+        width: 90%; /* Šířka boxů bude upravena na menších zařízeních */
+    }
+
+    nav a {
+        display: block; /* Odkazy budou pod sebou */
+        margin: 5px 0; /* Zkrácení mezery mezi odkazy */
+    }
+}
+
+/* Odebrání označení odkazu po kliknutí */
+a:focus, a:active {
+    outline: none;
+}
+
+/* Zúžení textu v odstavcích */
+p {
+    max-width: 1100px; /* Nastavení maximální šířky pro odstavce */
+    margin: 0 auto; /* Centrovat odstavce */
+    text-align: justify; /* Zarovnání textu do bloku */
+}
+
+/* Zúžení a centrování textu v seznamech */
+ul {
+    max-width: 1100px; /* Nastavení maximální šířky pro seznamy */
+    margin: 0 auto; /* Centrovat seznamy */
+    padding-left: 20px; /* Přidání odsazení vlevo */
+    text-align: justify; /* Zarovnání textu do bloku */
+}
+
+/* Zarovnání obrázku na střed, zmenšení a přidání pozadí */
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    width: 30%; /* Zmenšení obrázku na 30% původní velikosti */
+    background-color: #f5f5f5; /* Barva pozadí obrázku */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Animace pro nadpisy a prvky při načtení */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stylový efekt, když uživatel najede na obrázek */
+.image-hover {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-hover img {
+    transition: transform 0.3s ease;
+}
+
+.image-hover:hover img {
+    transform: scale(1.1); /* Přiblížení obrázku */
+}
+
+.image-hover:active img {
+    transform: scale(1.2); /* Další přiblížení obrázku při kliknutí */
+}
+
+/* Flexbox pro hlavní obsah a patičku */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Zajistí, že hlavní obsah vyplní prostor mezi hlavičkou a patičkou */
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Styl pro tlačítka */
+button {
+    background: linear-gradient(45deg, #005bb5, #003366);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #003366, #001122);
+    transform: translateY(-3px);
+}
+
+button:active {
+    background: linear-gradient(45deg, #002244, #000000);
+    transform: scale(0.95);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Možnosti pro hlavní stránku */
+body.main-page {
+    background-color: #ffffff; /* Bílé pozadí pro hlavní stránku */
+    color: #2d2d2d;  /* Tmavý text pro kontrast */
+}
+
+header.main-page {
+    background-color: #ff6f61; /* Oranžová barva pro záhlaví */
+    color: white;
+    background: linear-gradient(90deg, #ff6f61, #ff8a65); /* Přidání gradientu */
+}
+
+nav.main-page a {
+    color: #ffffff;
+    background-color: #ff6f61; /* Stejná oranžová pro odkazy */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav.main-page a:hover {
+    color: #ffcc00;
+    background-color: #ff8a65; /* Světlejší oranžová při hover efektu */
+}
+
+h2.main-page {
+    color: #ff6f61;  /* Titulky budou v oranžové */
+    font-size: 2em; /* Větší velikost písma pro titulky na hlavní stránce */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Přidání stínu pro text */
+}
+
+/* Přechody a efekty */
+header.main-page, nav.main-page, h2.main-page {
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+/* Přidání zvýraznění aktivní stránky */
+nav a.active {
+    font-weight: bold;
+    background-color: #002244; /* Přidání pozadí pro aktivní odkaz */
+    border-radius: 5px; /* Přidání zaoblených rohů pro aktivní odkaz */
+    color: #ffcc00; /* Zářivá barva pro aktivní odkaz */
+    box-shadow: none; /* Zrušení černého rámečku */
+}
+/* Možnosti pro hlavní stránku */
+body.main-page {
+    background-color: #ffffff; /* Bílé pozadí pro hlavní stránku */
+    color: #2d2d2d;  /* Tmavý text pro kontrast */
+}
+
+header.main-page {
+    background-color: #ff6f61; /* Oranžová barva pro záhlaví */
+    color: white;
+    background: linear-gradient(90deg, #ff6f61, #ff8a65); /* Přidání gradientu */
+}
+
+nav.main-page a {
+    color: #ffffff;
+    background-color: #ff6f61; /* Stejná oranžová pro odkazy */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav.main-page a:hover {
+    color: #ffcc00;
+    background-color: #ff8a65; /* Světlejší oranžová při hover efektu */
+}
+
+h2.main-page {
+    color: #ff6f61;  /* Titulky budou v oranžové */
+    font-size: 2em; /* Větší velikost písma pro titulky na hlavní stránce */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Přidání stínu pro text */
+}
+
+/* Přechody a efekty */
+header.main-page, nav.main-page, h2.main-page {
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+/* Přidání zvýraznění aktivní stránky */
+nav a.active {
+    font-weight: bold;
+    background-color: #002244; /* Přidání pozadí pro aktivní odkaz */
+    border-radius: 5px; /* Přidání zaoblených rohů pro aktivní odkaz */
+    color: #ffcc00; /* Zářivá barva pro aktivní odkaz */
+    box-shadow: none; /* Zrušení černého rámečku */
+}
+
+/* Odstranění černého rámečku */
+.highlight {
+    background-color: transparent; /* Odstranění pozadí */
+    border: none; /* Odstranění rámečku */
+    box-shadow: none; /* Zrušení případného stínu */
+}
